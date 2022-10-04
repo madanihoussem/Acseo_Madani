@@ -5,6 +5,7 @@
 {% block body %}
 <div class="shadow p-3 mb-5 bg-white rounded">    
     <form method="post">
+        <h1 class="h3 mb-3 font-weight-normal">Connexion</h1>
         {% if error %}
             <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
         {% endif %}
@@ -23,10 +24,9 @@
             </div>
         {% endif %}
 
-        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
         <label for="inputEmail">Email</label>
         <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control mb-3" autocomplete="email" required autofocus>
-        <label for="inputPassword">Password</label>
+        <label for="inputPassword">Mot de passe</label>
         <input type="password" name="password" id="inputPassword" class="form-control mb-3" autocomplete="current-password" required>
 
         <input type="hidden" name="_csrf_token"
@@ -44,8 +44,8 @@
             </div>
         #}
 
-        <button class="btn btn-lg btn-primary" type="submit">
-            Sign in
+        <button class="btn btn-primary" type="submit">
+            Se connecter
         </button>
     </form>
 </div>
